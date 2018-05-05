@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>商品评论分析系统</title>
+
+    <link rel="icon" href="{% static 'bootstrap/image/fish.jpg' %}">
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'bootstrap/css/admin.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'bootstrap/css/login.css' %}" rel="stylesheet">
+    <link href="{% static 'bootstrap/css/carousel.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+
+            <a class="navbar-brand" href="#">商品评论分析系统</a>
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false"
+                    aria-controls="navbar">
+
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div id="navbar" class="collapse navbar-collapse">
+                <!-- <a class="navbar-brand" href="#">学生宿舍管理系统</a> -->
+                <ul class="nav navbar-nav">
+                    <!--默认主页原本是学生登录页面，只有当管理员点击“管理员登录，才进入管理员登录界面-->
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row">
+        <!--
+        <div class="col-lg-8 col-sm-8">
+
+            <img src="{% static 'bootstrap/image/home/bg.png' %}" width=90%>
+
+        </div>
+        -->
+
+        <div class="col-lg-8 col-sm-8">
+
+            <ul id="myTab" class="nav nav-tabs">
+                <li class="active">
+                    <a href="#product_search" data-toggle="tab">
+                        商品查询
+                    </a>
+                </li>
+                <li>
+                    <a href="#admin_login" data-toggle="tab">
+                        品牌查询
+                    </a>
+                </li>
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+                <div  id="product_search">
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="row-fluid">
+                                <div class="span2">
+                                </div>
+                                <div class="span6">
+                                    <form class="form-search" action="/dor/admin_handle/login/admin_sign_in" id="admin_sign_in" method="POST">
+                                        <h2>
+                                            <em><input class="input-medium search-query" type="text" /><button class="btn" type="submit">查找</button>
+                                            </em>
+                                        </h2>
+                                        {% csrf_token %}
+                                    </form>
+                                </div>
+                                <div class="span4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <footer style="margin-top:40px;text-align:center">
+        <p>张敏华</p>
+        <p>© 2017 汕头大学</p>
+    </footer>
+
+</div>
+    <script type="text/javascript" src="{% static 'bootstrap/js/jquery-2.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+
+</body>
+<script>
+    function show_stu_index()
+    {
+        document.getElementById("stu_acc").submit();
+    }
+</script>
+</html>
