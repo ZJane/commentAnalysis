@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+
 """commentAnalysis URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:

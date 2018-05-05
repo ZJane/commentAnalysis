@@ -1,5 +1,7 @@
-from django.apps import AppConfig
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
 
+from django.apps import AppConfig
 
 class CommenthandlerConfig(AppConfig):
     name = 'commentHandler'
